@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SellerRegistration.aspx.cs" Inherits="WebApplication1.SellerRegistration" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-   <div  class="row vertical-center-row">
+   <div  class="row vertical-center-row" >
     <div class="col-md-8 col-md-offset-1">
        <legend style="font-size:40px">Seller Registration</legend>
         <fieldset>

@@ -2,7 +2,7 @@
 <%@ MasterType VirtualPath="~/Site.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-       <div class="container">
+       <div class="container" >
           
                 <Legend>Edit Property</Legend>
         <br />

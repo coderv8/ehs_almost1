@@ -16,10 +16,11 @@
 }
 
 
+
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
     transition: 0.3s;
-    width: 100%;
+    width: 50%;
 }
 
 .card:hover {
@@ -27,7 +28,8 @@
 }
 
 .card-body {
-    padding: 2px 16px;
+    padding: 8px 20px;
+    width:552px;
 }
 
   </style>
@@ -69,7 +71,7 @@
                     <div class="container">
   
  
-  <div class="card" id="imgdiv" style="width:400px">
+  <div class="card" id="imgdiv" style="width:552px">
     
     <div class="card-body" id="bodydiv" runat="server">   
     </div>

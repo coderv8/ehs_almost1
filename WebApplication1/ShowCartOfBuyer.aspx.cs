@@ -60,7 +60,6 @@ namespace WebApplication1
             // Response.Write("<script>alert('data added to cart :" + data + "');</script>");
         }
 
-
         /// <summary>  
         /// Load Controls on OnInit event  
         /// </summary>  
@@ -84,12 +83,16 @@ namespace WebApplication1
                 foreach (var k in propertyList)
                 {
 
+
                     string imgpath = @"Images\home_back.jpeg";
 
 
                     // Intializing the UI Controls...
 
-                    Label lblPropname = new Label { CssClass = "space" };
+                    Label lblPropname = new Label { CssClass = "space", ForeColor = System.Drawing.Color.DarkBlue };
+
+
+
                     Label lblType = new Label { CssClass = "space" };
                     Label lblPropOption = new Label { CssClass = "space" };
                     Label lblPropDescription = new Label();
@@ -97,6 +100,7 @@ namespace WebApplication1
                     Label lblPrice = new Label();
                     Label lblIntialdeposit = new Label();
                     Label lblLandMArk = new Label();
+
 
                     //Create Group Container Div  
                     HtmlGenericControl div = new HtmlGenericControl("div");
@@ -107,6 +111,34 @@ namespace WebApplication1
                     System.Web.UI.WebControls.Image img = new System.Web.UI.WebControls.Image();
                     img.ImageUrl = imgpath;
 
+                    // styles 
+
+                    lblPropname.Style.Add("font-size", "25px");
+                    lblPropname.Style.Add("font-family", "Century Gothic");
+                    lblPropname.Style.Add("font-weight", "bold");
+
+                    lblType.Style.Add("font-family", "Century Gothic");
+                    lblType.Style.Add("font-weight", "bold");
+
+                    lblPropOption.Style.Add("font-family", "Century Gothic");
+                    lblPropOption.Style.Add("font-weight", "bold");
+
+
+
+                    lblPropDescription.Style.Add("font-family", "Century Gothic");
+                    lblPropDescription.Style.Add("font-weight", "bold");
+
+                    lblAddress.Style.Add("font-family", "Century Gothic");
+                    lblAddress.Style.Add("font-weight", "bold");
+
+                    lblPrice.Style.Add("font-family", "Century Gothic");
+                    lblPrice.Style.Add("font-weight", "bold");
+
+                    lblIntialdeposit.Style.Add("font-family", "Century Gothic");
+                    lblIntialdeposit.Style.Add("font-weight", "bold");
+
+                    lblLandMArk.Style.Add("font-family", "Century Gothic");
+                    lblLandMArk.Style.Add("font-weight", "bold");
 
 
 
@@ -114,20 +146,24 @@ namespace WebApplication1
                     // Mapping the Property data with UI controls...
 
                     lblPropname.Text = k.PropertyName;
-                    lblType.Text = "Type :  " + k.PropertyType + "     ";
-                    lblPropOption.Text = "Option :  " + k.PropertyOption + "     ";
-                    // lblPropDescription.Text = "Description : \t" + k.Description;
-                    lblAddress.Text = "Address :  " + k.Address + "     ";
-                    lblPrice.Text = "Price :  " + k.PriceRange + "     ";
-                    lblIntialdeposit.Text = "Intial Deposit :  " + k.InitialDeposit + "     ";
 
-                    lblLandMArk.Text = "LandMark :  " + k.Landmark + "     ";
+                    lblType.Text = "Type :  " + k.PropertyType + "    ||    ";
+                    lblPropOption.Text = "Option :  " + k.PropertyOption + "    ||    ";
+                    // lblPropDescription.Text = "Description : \t" + k.Description;
+                    lblAddress.Text = "Address :  " + k.Address + "        ";
+                    lblPrice.Text = "Price :  " + (int)k.PriceRange + "    ||    ";
+                    lblIntialdeposit.Text = "Intial Deposit :  " + (int)k.InitialDeposit + "    ||    ";
+
+                    lblLandMArk.Text = "LandMark :  " + k.Landmark + "  ||  ";
 
 
                     // Appending All the UI Controls to stackpanel
+                    div.Controls.Add(new LiteralControl("<br/>"));
                     div.Controls.Add(lblPropname);
+                    div.Controls.Add(new LiteralControl("<br/><br/>"));
                     div.Controls.Add(img);
                     div.Controls.Add(lblType);
+
                     div.Controls.Add(lblPropOption);
                     div.Controls.Add(lblPrice);
                     div.Controls.Add(lblIntialdeposit);
@@ -150,14 +186,21 @@ namespace WebApplication1
 
 
 
+
+
+
+
                     //button..
                     string propertyId = k.PropertyId.ToString();
                     var btnAddcart = new Button
                     {
-                      //  ID = "btnClick" + propertyId,
+                      
                         Text = "Delete from Cart",
-                        //  CssClass = "col-md-2 btn btn-info"
+                        CssClass = "btn btn-info"
                     };
+
+
+                    btnAddcart.Style.Add("font-family", "Century Gothic");
                     bodydiv.Controls.Add(div);
                     bodydiv.Controls.Add(btnAddcart);
                     btnAddcart.Click += (s, RoutedEventArgs) => { ConfirmCart(s, e, propertyId); };
@@ -168,6 +211,12 @@ namespace WebApplication1
 
                     // Adding all the childs to div
 
+
+
+
+
+
+                    // After adding all the childs..
 
 
 

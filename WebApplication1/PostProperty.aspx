@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PostProperty.aspx.cs" Inherits="WebApplication1.PostProperty" %>
 <%@ MasterType VirtualPath="~/Site.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="container">
+    <div class="container" >
           
                 <Legend>Add New Property</Legend>
         <br />

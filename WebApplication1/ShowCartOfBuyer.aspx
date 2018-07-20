@@ -21,9 +21,9 @@
 
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
     transition: 0.3s;
-    width: 100%;
+    width: 50%;
 }
 
 .card:hover {
@@ -31,7 +31,8 @@
 }
 
 .card-body {
-    padding: 2px 16px;
+    padding: 8px 20px;
+    width:552px;
 }
 
   </style>
@@ -41,24 +42,8 @@
         <table style="width:100%">
       
         <tr>
-            <td style="width:20%;vertical-align:top;background-color:#fcb8d5;">
-                <ul>
-                    <li>
-                        <asp:HyperLink ID="hrlLnDHome" runat="server" Text="L & D Home" NavigateUrl="~/LnDHome.aspx"></asp:HyperLink>
-                    </li>
-                    <li>
-                        <asp:HyperLink ID="hrlCollege" runat="server" Text="College Hires" NavigateUrl="~/CollegeHires.aspx"></asp:HyperLink>
-                    </li>
-                    <li>
-                        <asp:HyperLink ID="hrlMDP" runat="server" Text="Managerial Development Program" NavigateUrl="~/MDP.aspx"></asp:HyperLink>
-                    </li>
-                    <li>
-                        <asp:HyperLink ID="hrlEmerging" runat="server" Text="Emerging Technologies" NavigateUrl="~/EmergingTech.aspx"></asp:HyperLink>
-                    </li>
-                    <li>
-                        <asp:HyperLink ID="hrlFMP" runat="server" Text="Future Manager Program" NavigateUrl="~/FMP.aspx"></asp:HyperLink>
-                    </li>
-                </ul>
+            <td style="width:20%;vertical-align:top;">
+              
             </td>
             <td style="width:80%;vertical-align:top">
                 <div id="box">
@@ -66,7 +51,7 @@
                     <div class="container">
   
  
-  <div class="card" id="imgdiv" style="width:400px">
+  <div class="card" id="imgdiv" style="width:552px">
     
     <div class="card-body" id="bodydiv" runat="server">
      
