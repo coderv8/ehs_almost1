@@ -20,8 +20,8 @@
              <%-- <input type="text" name="fistName" placeholder="First Name" class="form-control">--%>
             </div>
               <div class="col-sm-5">
-                  <asp:RequiredFieldValidator ID="rfvFirstName" runat="server" ControlToValidate="txtFirstName" Display="Dynamic" Text=" * Please Enter First name" ForeColor="Red"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator runat="server" id="rexFirstName" controltovalidate="txtFirstName" Display="Dynamic" validationexpression="^[a-zA-Z'.\s]{1,20}" errormessage="First Name should be only Alphabets and maximum of 20 letters!" />
+                  <asp:RequiredFieldValidator Enabled="true" ID="rfvFirstName" runat="server" ControlToValidate="txtFirstName" Display="Dynamic" Text=" * Please Enter First name" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator Enabled="true" runat="server" id="rexFirstName" controltovalidate="txtFirstName" Display="Dynamic" validationexpression="^[a-zA-Z'.\s]{1,20}" errormessage="First Name should be only Alphabets and maximum of 20 letters!" />
               </div>
            <br />
               <br />
@@ -31,8 +31,8 @@
               <%--<input type="text" name="lastName" placeholder="Last Name" class="form-control">--%>
             </div>
               <div class="col-sm-5">
-                  <asp:RequiredFieldValidator ID="rfvLastName" runat="server" ControlToValidate="txtLastName" Text=" * Please Enter Last name" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator runat="server" id="rexLastName" controltovalidate="txtLastName" Display="Dynamic" validationexpression="^[a-zA-Z'.\s]{1,20}" errormessage="Last Name should be only Alphabets and maximum of 20 letters!" />
+                  <asp:RequiredFieldValidator Enabled="true" ID="rfvLastName" runat="server" ControlToValidate="txtLastName" Text=" * Please Enter Last name" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator Enabled="true" runat="server" id="rexLastName" controltovalidate="txtLastName" Display="Dynamic" validationexpression="^[a-zA-Z'.\s]{1,20}" errormessage="Last Name should be only Alphabets and maximum of 20 letters!" />
                   </div>
           </div>
             <br />
@@ -47,9 +47,9 @@
               <%--<input type="date" placeholder="Date Of Birth" class="form-control">--%>
             </div>
               <div class="col-sm-5">
-                  <asp:RequiredFieldValidator ID="refDOB" runat="server" ControlToValidate="txtDOB" Display="Dynamic" Text=" * Please Enter Date of Birth" ForeColor="Red"></asp:RequiredFieldValidator>
+                  <asp:RequiredFieldValidator Enabled="true" ID="refDOB" runat="server" ControlToValidate="txtDOB" Display="Dynamic" Text=" * Please Enter Date of Birth" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:CompareValidator ErrorMessage="(mm/dd/yyyy)" Display="Dynamic"  ID="valcDate"  ControlToValidate="txtDOB" Operator="DataTypeCheck" Type="Date" runat="server"></asp:CompareValidator>       
-                <asp:RangeValidator ID="valrDate" runat="server" ControlToValidate="txtDOB"  MinimumValue="12/31/1950" MaximumValue="1/1/2100" Type="Date" text="Invalid Date" Display="Dynamic"/>
+                <asp:RangeValidator Enabled="true" ID="valrDate" runat="server" ControlToValidate="txtDOB"  MinimumValue="12/31/1950" MaximumValue="1/1/2100" Type="Date" text="Invalid Date" Display="Dynamic"/>
               </div>
           </div>
 
@@ -74,8 +74,8 @@
             </div>
               
               <div class="col-sm-12">
-                  <asp:RequiredFieldValidator ID="rfvAddress" runat="server" ControlToValidate="txtAddress" Text=" * Please Enter Address" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator runat="server" id="rexAddress" Controltovalidate="txtAddress" Display="Dynamic" validationexpression="[0-9a-zA-Z #,-]{1,50}" errormessage="Address should be maximum of 50 letters!" />
+                  <asp:RequiredFieldValidator Enabled="true" ID="rfvAddress" runat="server" ControlToValidate="txtAddress" Text=" * Please Enter Address" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator Enabled="true" runat="server" id="rexAddress" Controltovalidate="txtAddress" Display="Dynamic" validationexpression="[0-9a-zA-Z #,-]{1,50}" errormessage="Address should be maximum of 50 letters!" />
               </div>
              
           </div>
@@ -109,8 +109,8 @@
                 <%-- <input type="text" name="pFistName" placeholder="User Name" class="form-control">--%>
             </div>
               <div class="col-sm-5">
-                  <asp:RequiredFieldValidator ID="rfvUser" Display="Dynamic" runat="server" ControlToValidate="txtUserName" Text="* Please provide user name" ForeColor="Red"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator runat="server"  id="rexUserName" Controltovalidate="txtUserName" Display="Dynamic" validationexpression="[A-Za-z0-9]{6,15}" errormessage="User Name should be Minimum 6 and Maximum 15 characters!" />
+                  <asp:RequiredFieldValidator Enabled="true" ID="rfvUser" Display="Dynamic" runat="server" ControlToValidate="txtUserName" Text="* Please provide user name" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator Enabled="true" runat="server"  id="rexUserName" Controltovalidate="txtUserName" Display="Dynamic" validationexpression="[A-Za-z0-9]{6,15}" errormessage="User Name should be Minimum 6 and Maximum 15 characters!" />
               </div>
             
              <%-- <div class="col-sm-4"></div>--%>
@@ -125,8 +125,8 @@
                               <%--<input type="text" name="pFistName" placeholder="Password" class="form-control">--%>
             </div>
               <div class="col-sm-5">
-                  <asp:RequiredFieldValidator ID="rfvPwd" runat="server" ControlToValidate="txtPassword" Text="* Please provide password" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="rexPassword" runat="server" ControlToValidate="txtPassword" Display="Dynamic" ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$" ErrorMessage="Minimum 8 characters atleast 1 Alphabet, 1 Number and 1 Special Character"  />
+                  <asp:RequiredFieldValidator Enabled="true" ID="rfvPwd" runat="server" ControlToValidate="txtPassword" Text="* Please provide password" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator Enabled="true" ID="rexPassword" runat="server" ControlToValidate="txtPassword" Display="Dynamic" ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$" ErrorMessage="Minimum 8 characters atleast 1 Alphabet, 1 Number and 1 Special Character"  />
 
               </div>
                 <br />
@@ -137,8 +137,8 @@
               <%--<input type="pPhoneNbr" placeholder="Phone Number" class="form-control">--%>
             </div>
             <div class="col-sm-6">
-                <asp:RequiredFieldValidator ID="rfvPhoneNo" runat="server" Display="Dynamic" ControlToValidate="txtPhoneNo" Text="* Please provide PhoneNo" ForeColor="Red" ></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" Display="Dynamic" runat="server"  ControlToValidate="txtPhoneNo" ErrorMessage="Phone No must be only 10 digits and should start with 6,7,8 or 9!" ValidationExpression="[6-9][0-9]{9}"></asp:RegularExpressionValidator>  
+                <asp:RequiredFieldValidator Enabled="true" ID="rfvPhoneNo" runat="server" Display="Dynamic" ControlToValidate="txtPhoneNo" Text="* Please provide PhoneNo" ForeColor="Red" ></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator Enabled="true" ID="RegularExpressionValidator1" Display="Dynamic" runat="server"  ControlToValidate="txtPhoneNo" ErrorMessage="Phone No must be only 10 digits and should start with 6,7,8 or 9!" ValidationExpression="[6-9][0-9]{9}"></asp:RegularExpressionValidator>  
             </div>
             <br />
                 <br />
@@ -147,8 +147,8 @@
               <%--<input type="email" name="pEmail" placeholder="Email" class="form-control">--%>
            </div>
             <div class="col-sm-6">
-                <asp:RequiredFieldValidator ID="rfvEmail" Display="Dynamic" runat="server" ControlToValidate="txtEmail" Text="* Please provide Email" ForeColor="Red" ></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="rexEmail" Display="Dynamic" runat="server" ErrorMessage="Please Enter Valid Email ID " ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"> </asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator Enabled="true" ID="rfvEmail" Display="Dynamic" runat="server" ControlToValidate="txtEmail" Text="* Please provide Email" ForeColor="Red" ></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator Enabled="true" ID="rexEmail" Display="Dynamic" runat="server" ErrorMessage="Please Enter Valid Email ID " ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"> </asp:RegularExpressionValidator>
             </div>
 
             </div>

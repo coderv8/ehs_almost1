@@ -94,6 +94,21 @@ namespace WebApplication1
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
+            rfvAddress.Enabled = false;
+            rfvEmail.Enabled = false;
+            rfvFirstName.Enabled = false;
+            rfvLastName.Enabled = false;
+            rfvPhoneNo.Enabled = false;
+            rfvPwd.Enabled = false;
+            rfvUser.Enabled = false;
+            rexAddress.Enabled = false;
+            rexEmail.Enabled = false;
+            rexFirstName.Enabled = false;
+            rexLastName.Enabled = false;
+            rexPassword.Enabled = false;
+            rexUserName.Enabled = false;
+            RegularExpressionValidator1.Enabled = false;
+            
             Response.Redirect("Default.aspx");
         }
     }

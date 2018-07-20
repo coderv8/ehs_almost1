@@ -67,20 +67,20 @@
                 </td>
                 <td style="width: 80%; vertical-align: top">
                     
-  <div runat="server" id="divalert" height="30px" width="200px" visible="false" class="alert alert-success alert-dismissible" role="alert">
-       <asp:Label runat="server" ID="lblalert" ></asp:Label>
-             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-            
-    </div>
+
                     <div id="box">
 
                         <div class="container">
 
 
                             <div class="card" id="imgdiv" style="width: 552px">
-
+                                  <div runat="server" id="divalert" height="30px" width="200px" visible="false" class="alert alert-success alert-dismissible" role="alert">
+       <asp:Label runat="server" ID="lblalert" ></asp:Label>
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+            
+    </div>
                                 <div class="card-body" id="bodydiv" runat="server">
                                 </div>
                             </div>
