@@ -25,7 +25,7 @@
        }
    </style>
 
-    <span style="padding-left:450px;color:darkblue;font-family:'Century Gothic';font-weight:bold;font-size:30px">EHS Simplify Lives</span>
+    <span style="padding-left:410px;color:darkblue;font-family:'Century Gothic';font-weight:bold;font-size:40px">EHS Simplify Lives</span>
 
     <div class="row"  style="padding-left: 400px; background-image: url(Images/image5.jpeg);">
         
@@ -53,16 +53,20 @@
         <br /><br />
         </div>
     
-    <div style="width:100%;height:300px">
-          <span style="padding-left:100px;padding-top:20px;color:darkblue;font-family:'Century Gothic';font-weight:bold;font-size:50px">Give Yourself The Edge &
-               View Relevant Properties </span><br /> <span style="padding-left:200px;padding-bottom:100px;color:darkblue;font-family:'Century Gothic';font-weight:bold;font-size:40px">As Soon As They Come On The Market</span>
+    <div style="width:100%;height:300px;padding-top:60px;">
+          <span style="padding-left:100px;color:darkblue;font-family:'Century Gothic';font-weight:bold;font-size:50px">Give Yourself The Edge &
+               View Relevant</span> <span style="padding-left:450px;color:darkblue;font-family:'Century Gothic';font-weight:bold;font-size:50px"> Properties </span><br /> <span style="padding-left:200px;color:darkblue;font-family:'Century Gothic';font-weight:bold;font-size:40px">As Soon As They Come On The Market</span>
     </div>
-    
-  <p>Some Of Our Customer's Properties</p>
-     
- <img  src="Images/image1.jpg"  class="float-left" alt="image1" width="378" height="236" />       
+    <div >
+        <span style="padding-left:380px;color:green;font-family:cursive;font-weight:bold;font-size:20px">Some Of Our Customer's Properties</span>
+    </div>
+  
+     <div style="padding-top:30px;">
+          <img  src="Images/image1.jpg"  class="float-left" alt="image1" width="378" height="236" />       
   <img src="Images/image2.jpg"  class="float-right" alt="image2" width="378" height="236" /> 
-         <img src="Images/image3.jpg"  class="float-center" alt="image3" width="380" height="236" />                   
+         <img src="Images/image3.jpg"  class="float-center" alt="image3" width="380" height="236" />     
+     </div>
+              
         
 
        
