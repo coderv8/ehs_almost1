@@ -151,11 +151,15 @@
                 </div>
                 <br />
            <br />   <br />   
-                <div class="form-group">
-                    <div class="col-sm-4 col-sm-offset-3">
-                        <asp:Button ID="btnRegister" class="btn btn-primary btn-block" runat="server" Text="Register" OnClick="btnRegister_Click" />
+                 <div class="form-group">
+                    <div class="col-sm-2 col-sm-offset-1">
+                        <asp:Button ID="btnRegister" class="btn btn-primary btn-block" runat="server" Text="Update" OnClick="btnRegister_Click"/>
+                        
                        <%-- <button type="submit" class="btn btn-primary btn-block">Register</button>--%>
                     </div>
+                <div class="col-sm-2 col-sm-offset-0">
+                        <asp:Button ID="btnCancel" class="btn btn-primary btn-block" runat="server" BackColor="Gray" Text="Cancel" OnClick="btnCancel_Click" />
+                </div>
                 </div>
      
         </div> <!-- ./container -->

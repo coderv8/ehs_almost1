@@ -9,7 +9,7 @@
      <style>
 #box {
     max-width: 60em;
-    height: 24em;
+    height: 29em;
     padding: 8.5em;
     margin: 0em;
    border: 0.062em solid #999;

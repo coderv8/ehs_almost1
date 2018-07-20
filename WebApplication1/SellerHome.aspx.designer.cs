@@ -13,15 +13,6 @@ namespace WebApplication1 {
     public partial class SellerHome {
         
         /// <summary>
-        /// lblSort control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSort;
-        
-        /// <summary>
         /// btnVerifiedProp control.
         /// </summary>
         /// <remarks>

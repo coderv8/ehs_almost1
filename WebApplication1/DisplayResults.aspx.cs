@@ -20,11 +20,12 @@ namespace WebApplication1
         List<State> states = null;
         List<City> cities = null;
         static int stateId = 1;
-        string state = "";
-        string city = "";
-        int min = 0;
-        int max = 0;
-        bool ck = false;
+         string state = "";
+         string city = "";
+         int min = 0;
+         int max = 0;
+        static bool? ck = null;
+        static bool first = false;
         protected void Page_Load(object sender, EventArgs e)
         {
             cities = sellerObj.GetCities(stateId);
@@ -42,13 +43,14 @@ namespace WebApplication1
                 ddlCity.DataValueField = "CityName";
                 ddlCity.DataBind();
 
-                HttpCookie reqCookies = Request.Cookies["sortInfo"];
-                if (reqCookies != null)
-                {
-                    state = reqCookies["State"].ToString();
-                    city = reqCookies["City"].ToString();
-                }
-                DisplayProperties(sender,e);
+                //HttpCookie reqCookies = Request.Cookies["sortInfo"];
+                //if (reqCookies != null)
+                //{
+                //    state = reqCookies["State"].ToString();
+                //    city = reqCookies["City"].ToString();
+                //}
+               // DisplayProperties(sender,e);
+
             }
             if (Session["userId"] == null)
             {
@@ -65,13 +67,11 @@ namespace WebApplication1
             Master.Login = false;
             Master.Signup = false;
             Master.Profile = true;
-            Master.lbl_Profile = Session["userName"].ToString();  
-                
+            Master.lbl_Profile = Session["userName"].ToString();
+                Master.Cart = true;
             }
         }
         
-
-
         /// <summary>  
         /// Load Controls on OnInit event  
         /// </summary>  
@@ -83,16 +83,26 @@ namespace WebApplication1
             List<Property> propertyList = new List<Property>();
             if (ck == false)
                 propertyList = buyerValidationObj.showProperties(state, city);
-            else
+            else if(ck==true)
                 propertyList = buyerValidationObj.GetPropertiesByPrice(min, max);
-            if (propertyList == null)
+            else if (first == false)
+            {
+                HttpCookie reqCookies = Request.Cookies["sortInfo"];
+                if (reqCookies != null)
+                {
+                    state = reqCookies["State"].ToString();
+                    city = reqCookies["City"].ToString();
+                }
+                propertyList = buyerValidationObj.showProperties(state, city);
+                first = true;
+            }
+            if (propertyList == null && ck != null)
                 Response.Write("<script>alert('There are no properties to be displayed');</script>");
-
-
+            int f = 0;
             foreach (var k in propertyList)
             {
-
-                string imgpath = @"Images\home_back.jpeg";
+                f++;
+                string imgpath = @"Images\"+f+".jpeg";
 
 
                 // Intializing the UI Controls...
@@ -220,7 +230,7 @@ namespace WebApplication1
                 btnOwnerDetails.Style.Add("font-family", "Century Gothic");
 
 
-                btnOwnerDetails.Click += (s, RoutedEventArgs) => { ConfirmCart(s, e, propertyId); };
+                btnOwnerDetails.Click += (s, RoutedEventArgs) => { GetContactDetails(s, e, propertyId); };
                 // Adding all the childs to div
                 bodydiv.Controls.Add(div);
                 bodydiv.Controls.Add(btnAddcart);
@@ -235,11 +245,18 @@ namespace WebApplication1
         
     }
 
-     
-
+        private void GetContactDetails(object s, EventArgs e, string propertyId)
+        {
+        
+            //  Response.Write("<script>alert('page refreshed :" + "data" + "');</script>");
+            divalert.Visible = Visible;
+            lblalert.Text = "svr prasad";
         
 
-       protected void DisplayProperties(object sender , EventArgs e)
+
+    }
+
+    protected void DisplayProperties(object sender , EventArgs e)
         {
            // Response.Write("<script>alert('page refreshed :" + "data" + "');</script>");
             OnInit(e);
@@ -258,16 +275,23 @@ namespace WebApplication1
 
         private void ConfirmCart(object sender, EventArgs e, string propertyId)
         {
-         
+
+            if (Session["userId"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
             BuyerValidations buyerValidationObj = new BuyerValidations();
             List<Property> propertyList = new List<Property>();
             BuyerValidations buval = new BuyerValidations();
             StringBuilder sb = new StringBuilder();
+            
             int BuyerID_login =int.Parse( Session["userId"].ToString());
             propertyList = buyerValidationObj.AddToCart(int.Parse(propertyId), BuyerID_login);
+            
             foreach (var k in propertyList)
             {
-                Response.Write("<script>alert('" + k.PropertyName + " is added to Cart :');</script>");
+
+                Response.Write("<script>alert('" + k.PropertyName + " added to cart...');</script>");
                 sb.Append("Name: " + k.PropertyName + "\n");
                 sb.Append("Type: " + k.PropertyType + "\n");
                 sb.Append("Option :" + k.PropertyOption + "\n");

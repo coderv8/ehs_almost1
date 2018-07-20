@@ -5,7 +5,7 @@
      <style>
 #box {
     max-width: 60em;
-    height: 24em;
+    height: 25em;
     padding: 8.5em;
     margin: 0em;
    border: 0.062em solid #999;
@@ -41,23 +41,21 @@
             </td>
         </tr>
         <tr>
-            <td style="width: 20%; vertical-align: top;">
+            <td style="width: 20%;vertical-align: top;">
+                
                 <div class="form-group">
-                    <asp:Label ID="lblSort" runat="server" Text="Sort Property By " Width="70%" Height="40px"></asp:Label>
+                    <asp:Button ID="btnVerifiedProp" Text="Verified" runat="server" ForeColor="White" Class = "btn btn-info" Width="50%" Height="40px" OnClick="btnVerifiedProp_Click" />
                 </div>
                 <div class="form-group">
-                    <asp:Button ID="btnVerifiedProp" Text="Verified" runat="server" ForeColor="White" BackColor="Gray" class="btn btn-default" Width="50%" Height="40px" OnClick="btnVerifiedProp_Click" />
-                </div>
-                <div class="form-group">
-                     <asp:Button ID="btnDeactivatedProp" Text="Deactivated" runat="server" ForeColor="White" BackColor="Gray"  class="btn btn-default" Width="50%" Height="40px" OnClick="btnDeactivatedProp_Click"/>
+                     <asp:Button ID="btnDeactivatedProp" Text="Deactivated" runat="server" ForeColor="White" Class = "btn btn-info" Width="50%" Height="40px" OnClick="btnDeactivatedProp_Click"/>
                 </div>
 
                 <div class="form-group">
-                     <asp:Button ID="btnAllProp" runat="server" Text="Show All" ForeColor="White" BackColor="Gray"   class="btn btn-default" Width="50%" Height="40px" OnClick="btnAllProp_Click1" />
+                     <asp:Button ID="btnAllProp" runat="server" Text="Show All" ForeColor="White"   Class = "btn btn-info" Width="50%" Height="40px" OnClick="btnAllProp_Click1" />
                 </div>
 
                 <div class="form-group">
-                    <asp:Button ID="btnAddProp" runat="server" Text="Add Property" BackColor="Green" ForeColor="White"  class="btn btn-default" Width="50%" Height="40px" OnClick="btnAddProp_Click" />
+                    <asp:Button ID="btnAddProp" runat="server" Text="Add Property"  ForeColor="White" BackColor="Green"  Class = "btn btn-info" Width="50%" Height="40px" OnClick="btnAddProp_Click" />
                 </div>
                 <%--<div class="form-group">
                     <asp:HyperLink ID="hlEdit" Text="Edit property" runat="server" NavigateUrl="~/EditProperty.aspx"></asp:HyperLink>

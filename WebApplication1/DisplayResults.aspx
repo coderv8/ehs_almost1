@@ -6,7 +6,7 @@
     <style>
         #box {
             max-width: 60em;
-            height: 24em;
+            height: 29em;
             padding: 8.5em;
             margin: 0em;
             border: 0.062em solid #999;
@@ -49,7 +49,7 @@
                         <asp:DropDownList runat="server" CssClass="form-control" ID="ddlCity" Width="50%" Height="40px"></asp:DropDownList>
                     </div>
                     <div class="form-group">
-                        <asp:Button runat="server" ID="btnSearchByRegion" Text="Search" ForeColor="White" BackColor="Gray" class="btn btn-default" Width="50%" Height="40px" OnClick="btnSearchByRegion_Click" />
+                        <asp:Button runat="server" ID="btnSearchByRegion" Text="Search" ForeColor="White" Class = "btn btn-info" Width="50%" Height="40px" OnClick="btnSearchByRegion_Click" />
                     </div>
 
                     <div class="form-group"> 
@@ -61,11 +61,19 @@
                        <%-- <asp:RequiredFieldValidator ID="rfvMax" Enabled="true" runat="server" ControlToValidate="txtMaxRange" ForeColor="Red" Text="Enter Max price"></asp:RequiredFieldValidator>--%>
                     </div>
                     <div class="form-group">
-                        <asp:Button runat="server" ID="btnSearchByPrice" Text="Search" ForeColor="White" BackColor="Gray" class="btn btn-default" Width="50%" Height="40px" OnClick="btnSearchByPrice_Click" />
+                        <asp:Button runat="server" ID="btnSearchByPrice" Text="Search" ForeColor="White" Class = "btn btn-info" Width="50%" Height="40px" OnClick="btnSearchByPrice_Click" />
                     </div>
 
                 </td>
                 <td style="width: 80%; vertical-align: top">
+                    
+  <div runat="server" id="divalert" height="30px" width="200px" visible="false" class="alert alert-success alert-dismissible" role="alert">
+       <asp:Label runat="server" ID="lblalert" ></asp:Label>
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+            
+    </div>
                     <div id="box">
 
                         <div class="container">

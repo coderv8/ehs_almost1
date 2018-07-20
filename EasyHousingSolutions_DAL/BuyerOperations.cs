@@ -207,7 +207,7 @@ namespace EasyHousingSolutions_DAL
         {
             EasyHousingSolutions_Entities entity = new EasyHousingSolutions_Entities();
             var result = (from prop in entity.Properties
-                          where prop.PriceRange >= min && prop.PriceRange <= max
+                          where prop.PriceRange >= min && prop.PriceRange <= max && prop.IsActive==true
                           select prop);
 
             return result.ToList<Property>();

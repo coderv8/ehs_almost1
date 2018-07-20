@@ -16,7 +16,7 @@ namespace WebApplication1
         SellerValidations sellerObj = new SellerValidations();
         int sellerId = 0;
         List<Property> propertyList = new List<Property>();
-        
+        static bool first = false;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["userId"] == null)
@@ -47,12 +47,16 @@ namespace WebApplication1
             
             if (propertyList == null)
                 Response.Write("<script>alert('There are no properties to be displayed');</script>");
-
+            int imgpathID=10;
             foreach (var k in propertyList)
             {
+                if (imgpathID < 1)
+                    imgpathID = 10;
+               
+                    imgpathID--;
 
 
-                string imgpath = @"Images\home_back.jpeg";
+                string imgpath = @"Images\"+imgpathID+".jpeg";
 
 
                 // Intializing the UI Controls...
@@ -199,7 +203,7 @@ namespace WebApplication1
 
             public void Edit1(object sender, EventArgs e,string propId)
         {
-            Response.Write("<script>alert('data added to cart :" + propId + "');</script>");
+            
            // Session["PropId"] = propId;
             Response.Redirect("EditProperty.aspx");
         }

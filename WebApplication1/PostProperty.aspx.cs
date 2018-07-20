@@ -148,5 +148,15 @@ namespace WebApplication1
                 txtInitialDeposit.Enabled = true;
             }
         }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            rfvAddress.Enabled = false;
+            rfvInitialDeposit.Enabled = false;
+            rfvLandMark.Enabled = false;
+            rfvPriceRange.Enabled = false;
+            rfvPropName.Enabled = false;
+            Response.Redirect("SellerHome.aspx");
+        }
     }
 }

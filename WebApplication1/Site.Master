@@ -7,6 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> Easy Housing Solutions</title>
+    <link href="Content/Site.css" rel="stylesheet" />
     <link href="Content/NavigationBar.css" rel="stylesheet" />
     <link href="Content/DisplaySearchDetaills.css" rel="stylesheet" />
     <asp:PlaceHolder runat="server">
@@ -17,10 +18,12 @@
 </head>
 <body>
 
-     <nav class="navbar navbar-default navbar-expand-lg navbar-light">
-        <div class="navbar-header d-flex col">
+     <nav class="navbar navbar-default navbar-expand-lg navbar-light" style="background-color: #198d17">
+        <div class="navbar-header d-flex col" >
           
-            <asp:HyperLink ID="hplHome" runat="server" class="navbar-brand" Text="EHS" NavigateUrl="~/Default.aspx"></asp:HyperLink>
+            <asp:HyperLink ID="hplHome" runat="server" class="navbar-brand" style="color: white;"  NavigateUrl="~/Default.aspx">
+                <span class="glyphicon glyphicon-leaf" style="font-size:small"></span> EHS
+            </asp:HyperLink>
             <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
                 <span class="navbar-toggler-icon"></span>
                 <span class="icon-bar"></span>
@@ -33,42 +36,44 @@
             <ul class="nav navbar-nav">
                 <li class="nav-item"><%--<a href="DisplayResults.aspx" class="nav-link">Home</a>--%>
 
-                     <asp:HyperLink ID="hplHome1" runat="server" class="nav-link" Text="Home" NavigateUrl="~/Default.aspx"></asp:HyperLink>
+                     <asp:HyperLink ID="hplHome1" runat="server" class="nav-link" style="color:white" Text="Home" NavigateUrl="~/Default.aspx"></asp:HyperLink>
                 </li>
-                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" style="color:white">About</a></li>
                
 
 
-                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                <li class="nav-item" ><a href="#" style="color:white" class="nav-link">Contact</a>
+                    
+                </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right ml-auto">
                 <li class="nav-item">
-                    <li id="divLogout" runat="server" visible="false" >
-                       <asp:HyperLink ID="lbtnLogout" runat="server" class="nav-link" Text="Logout"  NavigateUrl="~/Sample.aspx"></asp:HyperLink>
+                    <li id="divLogout" runat="server" style="color:white" visible="false" >
+                       <asp:HyperLink ID="lbtnLogout" style="color:white" runat="server" class="nav-link"  Text="Logout"  NavigateUrl="~/Sample.aspx"></asp:HyperLink>
                         <%--<asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-primary btn-block" OnClick="btnLogout_Click" />--%>
                     
                     </li>
                     <li id="divLogin" runat="server" visible="true">
-                        <asp:HyperLink ID="hrlLogin" runat="server" class="nav-link" Text="Login" NavigateUrl="~/Login.aspx"></asp:HyperLink></li>
-                    <li id="divProfile" runat="server" visible="false">
-                        <asp:Label ID="lblProfile" class="navbar-brand" Width="20%" runat="server"></asp:Label></li>
+                        <asp:HyperLink ID="hrlLogin"  runat="server" class="nav-link" style="color:white" Text="Login" NavigateUrl="~/Login.aspx"></asp:HyperLink></li>
+                    <li id="divProfile"  runat="server" visible="false">
+                        <asp:Label ID="lblProfile" style="color:white" class="navbar-brand" Width="15%" runat="server"></asp:Label></li>
                     
 			</li>
                 <li class="nav-item" id="divSignup" runat="server" visible="true">
-                    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Signup <b class="caret"></b></a>
+                    <a data-toggle="dropdown" style="color:white" class="nav-link dropdown-toggle" href="#">Signup <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                        
 
                         <li runat="server" visible="true">
-                            <asp:HyperLink ID="hrlSeller" runat="server" class="dropdown-item" Text="Seller" NavigateUrl="~/SellerRegistration.aspx"></asp:HyperLink>
+                            <asp:HyperLink ID="hrlSeller" runat="server" class="dropdown-item"  style="color:#128a2b" Text="Seller" NavigateUrl="~/SellerRegistration.aspx"></asp:HyperLink>
                         </li>
                         <li runat="server" visible="true">
-                            <asp:HyperLink ID="hrlBuyer" runat="server" class="dropdown-item" Text="Buyer" NavigateUrl="~/BuyerRegistration.aspx"></asp:HyperLink></li>
+                            <asp:HyperLink ID="hrlBuyer" runat="server" class="dropdown-item" style="color:#128a2b" Text="Buyer" NavigateUrl="~/BuyerRegistration.aspx"></asp:HyperLink></li>
                     </ul>
                 </li>
-      <li id="divCart" runat="server" visible="true">
-                        <asp:HyperLink ID="hplCart" runat="server" class="dropdown-item" Text="Cart" NavigateUrl="~/ShowCartOfBuyer.aspx"></asp:HyperLink></li>
+      <li id="divCart" runat="server" visible="false">
+                        <asp:HyperLink ID="hplCart" runat="server" class="dropdown-item" style="color:white" Text="Cart" NavigateUrl="~/ShowCartOfBuyer.aspx"></asp:HyperLink></li>
                 <%--<li class="nav-item dropdown">
                     <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Menu <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -117,7 +122,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> -Easy Housing Solutions</p>
             </footer>
         </div>
     </form>

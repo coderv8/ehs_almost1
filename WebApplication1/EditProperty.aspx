@@ -15,8 +15,8 @@
                         <%--<span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>--%>
                     </div>
                     <div class="col-sm-12">
-                         <asp:RequiredFieldValidator ID="rfvPropName" runat="server" ControlToValidate="txtPropName" Display="Dynamic" Text=" * Please Enter Property name" ForeColor="Red"></asp:RequiredFieldValidator>
-                         <asp:RegularExpressionValidator runat="server" id="rexPropName" controltovalidate="txtPropName" Display="Dynamic" validationexpression="^[a-zA-Z'.\s]{1,20}" ForeColor="Red" errormessage="Property Name should be only Alphabets and maximum of 20 letters!" />
+                         <asp:RequiredFieldValidator ID="rfvPropName" Enabled="true" runat="server" ControlToValidate="txtPropName" Display="Dynamic" Text=" * Please Enter Property name" ForeColor="Red"></asp:RequiredFieldValidator>
+                         <asp:RegularExpressionValidator runat="server" Enabled="true" id="rexPropName" controltovalidate="txtPropName" Display="Dynamic" validationexpression="^[a-zA-Z'.\s]{1,20}" ForeColor="Red" errormessage="Property Name should be only Alphabets and maximum of 20 letters!" />
                     </div>
                 </div>
                 <br />
@@ -78,8 +78,8 @@
                         <%--<input type="email" id="email" placeholder="Email" class="form-control">--%>
                     </div>
                     <div class="col-sm-12">
-                  <asp:RequiredFieldValidator ID="rfvAddress" runat="server" ControlToValidate="txtAddress" Text=" * Please Enter Address" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator runat="server" id="rexAddress" Controltovalidate="txtAddress" Display="Dynamic" validationexpression="[0-9a-zA-Z #,-]{1,50}" ForeColor="Red" errormessage="Address should be maximum of 50 letters!" />
+                  <asp:RequiredFieldValidator ID="rfvAddress" runat="server" Enabled="true" ControlToValidate="txtAddress" Text=" * Please Enter Address" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator runat="server" id="rexAddress" Enabled="true" Controltovalidate="txtAddress" Display="Dynamic" validationexpression="[0-9a-zA-Z #,-]{1,50}" ForeColor="Red" errormessage="Address should be maximum of 50 letters!" />
               </div>
                 </div>
                 <br />   <br />
@@ -91,8 +91,8 @@
                         <%--<input type="password" id="password" placeholder="Password" class="form-control">--%>
                     </div>
                     <div class="col-sm-12">
-                         <asp:RequiredFieldValidator ID="rfvLandMark" runat="server" ControlToValidate="txtLandMark" Display="Dynamic" Text=" * Please Enter LandMark" ForeColor="Red"></asp:RequiredFieldValidator>
-                         <asp:RegularExpressionValidator runat="server" id="rexLandMark" controltovalidate="txtLandMark" Display="Dynamic" validationexpression="^[a-zA-Z'.\s]{1,20}" ForeColor="Red" errormessage="LandMark should be only Alphabets and maximum of 20 letters!" />
+                         <asp:RequiredFieldValidator ID="rfvLandMark" runat="server" Enabled="true" ControlToValidate="txtLandMark" Display="Dynamic" Text=" * Please Enter LandMark" ForeColor="Red"></asp:RequiredFieldValidator>
+                         <asp:RegularExpressionValidator runat="server" id="rexLandMark" Enabled="true" controltovalidate="txtLandMark" Display="Dynamic" validationexpression="^[a-zA-Z'.\s]{1,20}" ForeColor="Red" errormessage="LandMark should be only Alphabets and maximum of 20 letters!" />
                     </div>
                 </div>
                <br />   <br />
@@ -120,7 +120,7 @@
                     </div>
                 <div class="col-sm-12">
                     <asp:RequiredFieldValidator ID="rfvInitialDeposit" Enabled="true" runat="server" ControlToValidate="txtInitialDeposit" Display="Dynamic" Text=" * Please Enter Initial Deposit" ForeColor="Red"></asp:RequiredFieldValidator>
-                    <asp:RangeValidator runat="server" id="rngInitialDeposit" Enabled="true" controltovalidate="txtInitialDeposit" type="Double" minimumvalue="5000" maximumvalue="10000" ForeColor="Red" errormessage="Initial Deposit should be between 5000 to 10000!" />
+                    <asp:RangeValidator runat="server" id="rngInitialDeposit" Enabled="true" controltovalidate="txtInitialDeposit" type="Double" minimumvalue="0" maximumvalue="10000" ForeColor="Red" errormessage="Initial Deposit should be between 5000 to 10000!" />
                 </div>
             </div>
                 <br />
@@ -132,8 +132,8 @@
                         <%--<input type="email" id="email" placeholder="Email" class="form-control">--%>
                     </div>
                 <div class="col-sm-12">
-                    <asp:RequiredFieldValidator ID="rfvPriceRange" runat="server" ControlToValidate="txtPriceRange" Display="Dynamic" Text=" * Please Enter Initial Deposit" ForeColor="Red"></asp:RequiredFieldValidator>
-                    <asp:RangeValidator runat="server" id="rngPriceRange" controltovalidate="txtPriceRange" type="Double" minimumvalue="10000" maximumvalue="100000" ForeColor="Red" errormessage="Price Range should be between 10000 to 100000!" />
+                    <asp:RequiredFieldValidator ID="rfvPriceRange" runat="server" Enabled="true" ControlToValidate="txtPriceRange" Display="Dynamic" Text=" * Please Enter Initial Deposit" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RangeValidator runat="server" id="rngPriceRange" Enabled="true" controltovalidate="txtPriceRange" type="Double" minimumvalue="10000" maximumvalue="100000" ForeColor="Red" errormessage="Price Range should be between 10000 to 100000!" />
                 </div>
             </div>
         <br />
